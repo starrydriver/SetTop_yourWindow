@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dt6smfyhde48g"]
 
-[ext_resource type="Script" uid="uid://b4c0xl76lplxi" path="res://订书机.cs" id="1_q6e28"]
-[ext_resource type="Texture2D" uid="uid://hu83v4pk036w" path="res://stapler.png" id="2_15rjb"]
+[ext_resource type="Script" uid="uid://b4c0xl76lplxi" path="res://Scripts/订书机.cs" id="1_1dgsa"]
+[ext_resource type="Texture2D" uid="uid://hu83v4pk036w" path="res://Image/stapler.png" id="2_3mfm6"]
 
 [node name="订书机" type="Control" node_paths=PackedStringArray("setTopButton", "CancelButton", "DisPlayButton", "DisPlayColumn")]
 layout_mode = 3
@@ -14,7 +14,7 @@ offset_right = -164.0
 offset_bottom = -519.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_q6e28")
+script = ExtResource("1_1dgsa")
 setTopButton = NodePath("setTopButton")
 CancelButton = NodePath("cancelButton3")
 DisPlayButton = NodePath("displayButton4")
@@ -24,7 +24,7 @@ DisPlayColumn = NodePath("OptionButton")
 texture_filter = 1
 position = Vector2(137.25, 146)
 scale = Vector2(2.89063, 2.60417)
-texture = ExtResource("2_15rjb")
+texture = ExtResource("2_3mfm6")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 visible = false

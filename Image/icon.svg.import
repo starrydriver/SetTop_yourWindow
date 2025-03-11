@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hu83v4pk036w"
-path="res://.godot/imported/stapler.png-ca19853705020496e6d466946488e5f2.ctex"
+uid="uid://dl8kyjcti2n7f"
+path="res://.godot/imported/icon.svg-22adc54f3de2074ff1d4c090e5cf0028.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stapler.png"
-dest_files=["res://.godot/imported/stapler.png-ca19853705020496e6d466946488e5f2.ctex"]
+source_file="res://Image/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-22adc54f3de2074ff1d4c090e5cf0028.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

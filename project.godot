@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="订书机"
-run/main_scene="res://订书机.tscn"
+run/main_scene="res://Scene/订书机.tscn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Image/icon.svg"
 config/size/borderless=false
 
 [display]
