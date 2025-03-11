@@ -1,0 +1,34 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="订书机"
+run/main_scene="res://订书机.tscn"
+config/features=PackedStringArray("4.4", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+config/size/borderless=false
+
+[display]
+
+window/size/viewport_width=1000
+window/size/viewport_height=600
+window/size/transparent=true
+window/per_pixel_transparency/allowed=true
+
+[dotnet]
+
+project/assembly_name="订书机"
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+viewport/transparent_background=true

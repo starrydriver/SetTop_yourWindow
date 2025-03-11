@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://dt6smfyhde48g"]
+
+[ext_resource type="Script" uid="uid://b4c0xl76lplxi" path="res://订书机.cs" id="1_q6e28"]
+[ext_resource type="Texture2D" uid="uid://hu83v4pk036w" path="res://stapler.png" id="2_15rjb"]
+
+[node name="订书机" type="Control" node_paths=PackedStringArray("setTopButton", "CancelButton", "DisPlayButton", "DisPlayColumn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 530.0
+offset_top = 81.0
+offset_right = -164.0
+offset_bottom = -519.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q6e28")
+setTopButton = NodePath("setTopButton")
+CancelButton = NodePath("cancelButton3")
+DisPlayButton = NodePath("displayButton4")
+DisPlayColumn = NodePath("OptionButton")
+
+[node name="Stapler" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(137.25, 146)
+scale = Vector2(2.89063, 2.60417)
+texture = ExtResource("2_15rjb")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 197.0
+offset_bottom = 44.0
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 221.0
+offset_top = 3.0
+offset_right = 283.0
+offset_bottom = 42.0
+text = "搜索"
+
+[node name="setTopButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 145.0
+offset_right = 74.0
+offset_bottom = 181.0
+text = "置顶"
+
+[node name="cancelButton3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 145.0
+offset_right = 117.0
+offset_bottom = 181.0
+text = "取消
+"
+
+[node name="displayButton4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 212.0
+offset_right = 84.0
+offset_bottom = 248.0
+text = "列出
+"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 227.0
+offset_right = 240.0
+offset_bottom = 247.0
