@@ -18,8 +18,9 @@ config/size/borderless=false
 
 [display]
 
-window/size/viewport_width=1000
-window/size/viewport_height=600
+window/size/viewport_width=600
+window/size/viewport_height=400
+window/size/borderless=true
 window/size/transparent=true
 window/per_pixel_transparency/allowed=true
 
@@ -27,8 +28,19 @@ window/per_pixel_transparency/allowed=true
 
 project/assembly_name="订书机"
 
+[file_customization]
+
+folder_colors={
+"res://Font/": "red",
+"res://Image/": "orange",
+"res://Scene/": "blue",
+"res://Scripts/": "green"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_2d=1
 viewport/transparent_background=true
+anti_aliasing/quality/use_debanding=true

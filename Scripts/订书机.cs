@@ -8,11 +8,9 @@ using Godot;
 public partial class 订书机 : Control
 {
 	//Export/
-	[Export] public Godot.Button searchButton;
-	[Export] public Godot.Button setTopButton;
-	[Export] public Godot.Button CancelButton;
-	[Export] public Godot.Button DisPlayButton;
-	[Export] public Godot.LineEdit searchInput;
+	[Export] public Godot.TextureButton setTopButton;
+	[Export] public Godot.TextureButton CancelButton;
+	[Export] public Godot.TextureButton DisPlayButton;
 	[Export] public Godot.OptionButton DisPlayColumn;
 	// 定义回调委托
 	private delegate bool EnumWindowsProc(IntPtr hWnd, IntPtr lParam);
@@ -54,7 +52,6 @@ public partial class 订书机 : Control
 	private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 	public override void _Ready()
 	{
-		// searchButton.ButtonDown += () => SearchWindow(searchInput.Text);
 		setTopButton.ButtonDown += () => SetTopWindow();
 		CancelButton.ButtonDown += () => CancelTopWindow();
 		DisPlayButton.ButtonDown += () => DisPlayAllWindow();
@@ -84,52 +81,7 @@ public partial class 订书机 : Control
 				break;
 		}
 	}
-	// public void SearchWindow(string windowName)
-	// {
-	// 	 // 先清空旧句柄
-	//     windowInfo.targetWindow = IntPtr.Zero;
-		
-	//     // 使用模糊查找
-	//     List<IntPtr> matchedWindows = new List<IntPtr>();
-	//     EnumWindows(delegate (IntPtr hWnd, IntPtr lParam)
-	//     {
-	//         if (!IsWindowVisible(hWnd)) return true;
-			
-	//         int length = GetWindowTextLength(hWnd);
-	//         if (length == 0) return true;
-			
-	//         StringBuilder sb = new StringBuilder(length + 1);
-	//         GetWindowText(hWnd, sb, sb.Capacity);
-	//         string title = sb.ToString();
 
-	//         // 模糊匹配
-	//         if (title.Contains(windowName))
-	//         {
-	//             matchedWindows.Add(hWnd);
-	//         }
-	//         return true;
-	//     }, IntPtr.Zero);
-	//     // 选择第一个匹配的窗口
-	//     if (matchedWindows.Count > 0)
-	//     {
-	//         windowInfo.targetWindow = matchedWindows[0];
-	//         GD.Print($"找到窗口：{GetWindowTitle(windowInfo.targetWindow)}");
-	//     }
-	//     else
-	//     {
-	//         GD.PrintErr("未找到匹配窗口");
-	//     }
-	// }
-	// // 新增辅助方法获取窗口标题
-	// private string GetWindowTitle(IntPtr hWnd)
-	// {
-	//     int length = GetWindowTextLength(hWnd);
-	//     if (length == 0) return "";
-		
-	//     StringBuilder sb = new StringBuilder(length + 1);
-	//     GetWindowText(hWnd, sb, sb.Capacity);
-	//     return sb.ToString();
-	// }
 	public void SetTopWindow()
 	{
 		bool result_last = SetWindowPos(

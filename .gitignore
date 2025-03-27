@@ -3,15 +3,13 @@
 export.cfg
 export_presets.cfg
 *.translation
-*.uid
-
+*.svg.import
 # Backup files
 *.old
-
+*.import
 # OS-specific files
 .DS_Store
 Thumbs.db
-
 # Editor-specific files
 *.godot/
 *.mono/
